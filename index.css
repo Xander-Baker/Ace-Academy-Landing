@@ -49,6 +49,7 @@ body {
 }
 
 #loginOverlay{
+    top: 0;
     position: fixed;
     visibility: hidden;
     color: white;

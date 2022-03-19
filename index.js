@@ -13,7 +13,8 @@ function enableBodyScroll(){
 
 document.getElementById("xSymbol").addEventListener("click", function(){
     document.getElementById("loginOverlay").style.visibility = "hidden";
-    document.getElementById("loginOverlay").style.position = "absolute";
+    document.getElementById("loginOverlay").style.position = "fixed ";
+
     document.getElementById("signUp").style.visibility = "hidden";
     document.getElementById("signUp").style.position = "absolute";
     document.getElementById("login").style.visibility = "hidden";
@@ -32,7 +33,7 @@ document.getElementById("signUpLoad").addEventListener("click", function(){
 
 document.getElementById("loginLoad").addEventListener("click", function(){
     document.getElementById("login").style.visibility = "visible";
-    document.getElementById("login").style.position = "absolute";
+    document.getElementById("login").style.position = "sticky";
 
     document.getElementById("signUp").style.visibility = "hidden";
     document.getElementById("signUp").style.position = "absolute";
@@ -40,6 +41,8 @@ document.getElementById("loginLoad").addEventListener("click", function(){
 
 document.getElementById("topBarLogin").addEventListener("click", function(){
     document.getElementById("loginOverlay").style.visibility = "visible";
+
+
     document.getElementById("login").style.position = "fixed";
     document.getElementById("login").style.visibility = "visible";
     document.getElementById("login").style.position = "absolute";

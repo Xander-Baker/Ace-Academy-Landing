@@ -19,6 +19,8 @@ document.getElementById("xSymbol").addEventListener("click", function(){
     document.getElementById("signUp").style.position = "absolute";
     document.getElementById("login").style.visibility = "hidden";
     document.getElementById("login").style.position = "absolute";
+
+    document.getElementById("letsChat").style.visibility = "visible";
     enableBodyScroll()
 });
 
@@ -28,6 +30,7 @@ document.getElementById("signUpLoad").addEventListener("click", function(){
 
     document.getElementById("signUp").style.visibility = "visible";
     document.getElementById("signUp").style.position = "absolute";
+
 });
 
 
@@ -40,6 +43,7 @@ document.getElementById("loginLoad").addEventListener("click", function(){
 });
 
 document.getElementById("topBarLogin").addEventListener("click", function(){
+    document.getElementById("letsChat").style.visibility = "hidden";
     document.getElementById("loginOverlay").style.visibility = "visible";
 
 

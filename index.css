@@ -347,3 +347,131 @@ body {
     flex-direction: column;
     justify-content: space-around;
 }
+
+#contactUs{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--blackOfBlack);
+}
+
+
+#contactUsCenterBox{
+    padding-top: 15%;
+    padding-left: 25%;
+    width: 50%;
+    height: 70vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contactUsTitleBox {
+    text-align: center;
+}
+
+#contactUsTitleBox  h1{
+    font-size: 3rem;
+}
+
+
+#contactUsTitleBox  h3{
+    font-size: 1.5rem;
+}
+
+#contactUsInput{
+    margin-top: 10%;
+    width: 100%;
+}
+
+#contactUsInput h2{
+    font-size: 2rem;
+}
+
+#contactUsInput input{
+    font-size: 2rem;
+} 
+#inputRow{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#contactInput{
+    height: 7vh;
+    width: 80%;
+}
+
+#buttonStuff{
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 7vh;
+    background-color: var(--darkRed);
+    color: white;
+    cursor: pointer;
+    border-bottom: 2px solid var(--darkRed);
+}
+
+#insideBut{
+    width: 20%;
+    display:flex;
+    flex-direction:row;
+}
+
+#copyright{
+    margin-top: 15%;
+}
+
+#socialImgs {
+    margin-top: 10%;
+    padding: 3%;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+ 
+#letsChat {
+    cursor: pointer;
+    z-index: 40;
+    position: fixed;
+    left: 83vw;
+    top: 91vh;
+    height: 7vh;
+    width: 15vw;
+    background-color: var(--rubyRed);
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#socialImgs img{
+    padding: 2%;
+    height: 100%;
+    width: 5vh;    
+    cursor: pointer;
+}
+
+#letsChat img{
+
+    height: 50%;
+    width: 40;
+    padding: 3%;
+}
+#letsChat h1{
+    text-align: center;
+    font-size: 1.25rem;
+}
+

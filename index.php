@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    session_destroy();
+    include("includes/functions.inc.php");
+    include("includes/dbh.inc.php");
+    
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,30 +21,54 @@
         </div>
         <div id="loginOverlay">
             <h1 id="xSymbol">✕</h1>
+            
             <div class="loginBox" id="login">
+            <form id="formBox" action="includes/login.inc.php" method="post">
                 <h1>Login</h1>
                 <h2 class="singUpText">New to the site?<span id="signUpLoad"> Sign Up</span></h2>
                 <h2 class="Lable">Email</h2>
-                <input class="inputThing" type="text"></input>
+                <input class="inputThing" type="text" name="email"></input>
                 <h2 class="Lable">Password</h2>
-                <input class="inputThing" type="text"></input>
+                <input class="inputThing" type="text" name="pwd"></input>
                 <h2 id="forgotPassword">Forgot Password?</h2>
-                <input class="buttonPress" type="button" value="Login"></input>
+                <input class="buttonPress" type="submit" value="Login" name="submit"></input>
+            </form>
             </div>
 
+            
             <div class="loginBox" id="signUp">
+            <form id="formBox" action="includes/signup.inc.php" method="post">
                 <h1>SignUp</h1>
                 <h2 class="singUpText">Already have an account? <span id="loginLoad">Login</span></h2>
                 <h2 class="Lable">First Name</h2>
-                <input class="inputThing" type="text"></input>
+                <input class="inputThing" type="text" name="name"></input>
                 <h2 class="Lable">Last Name</h2>
-                <input class="inputThing" type="text"></input>
+                <input class="inputThing" type="text" name="sname" ></input>
                 <h2 class="Lable">Email</h2>
-                <input class="inputThing" type="text"></input>
+                <input class="inputThing" type="text" name="email"></input>
                 <h2 class="Lable">Password</h2>
-                <input class="inputThing" type="password"></input>
+                <input class="inputThing" type="password" name="pwd"></input>
+                <h2 class="Lable">Repeat Password</h2>
+                <input class="inputThing" type="password" name="pwdrepeat"></input>
+                <h2 class="Lable">Are you a Student or a Tutor?</h2>
+                <select id ="typeSelect" name="type">
+                    <option value="Student">Student</option>
+                    <option value="Tutor" onselect="hideCourses">Tutor</option>
+                </select>
+                <span id="courseSelect">
+                <h2 class="Lable">Course Enrollment</h2>
+                <input type="checkbox" id="course1" name="course1" value="1">
+                <label for="course1"><?php echo getCourseName($conn, 1); ?></label><br>
+                <input type="checkbox" id="course2" name="course2" value="2">
+                <label for="course2"><?php echo getCourseName($conn, 2); ?></label><br>
+                <input type="checkbox" id="course3" name="course3" value="3">
+                <label for="course3"><?php echo getCourseName($conn, 3); ?></label><br>
+                <input type="checkbox" id="course4" name="course4" value="4">
+                <label for="course4"><?php echo getCourseName($conn, 4); ?></label><br>
+                </span>
                 <h2 id="forgotPassword">Forgot Password?</h2>
-                <input class="buttonPress" type="button" value="Login"></input>
+                <input class="buttonPress" type="submit" value="Sign Up" name="submit"></input>
+            </form>
             </div>
         </div>
         <div id="landingPageImg">

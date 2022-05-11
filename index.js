@@ -55,3 +55,14 @@ document.getElementById("topBarLogin").addEventListener("click", function(){
 });
 
 
+
+var course = document.getElementById("courseSelect");
+
+document.getElementById("typeSelect").addEventListener('change', function () {
+    var style = this.value == "Tutor" ? 'none' : 'block';
+    document.getElementById('courseSelect').style.display = style;
+    document.getElementById("course1").checked = false;
+    document.getElementById("course2").checked = false;
+});
+
+
